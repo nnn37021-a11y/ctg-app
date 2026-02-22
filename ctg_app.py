@@ -6,8 +6,15 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import matplotlib
 import matplotlib.font_manager as fm
-# 日本語フォント指定（Streamlit Cloud対応）
-plt.rcParams['font.family'] = 'DejaVu Sans'
+
+import os
+
+# IPAフォント読み込み
+font_path = os.path.join(os.path.dirname(__file__), "ipaexg.ttf")
+if os.path.exists(font_path):
+    fm.fontManager.addfont(font_path)
+    plt.rcParams["font.family"] = "IPAexGothic"
+    
 
 # フォント設定（Mac/Windows/Linux対応）
 _jp_fonts = ["Hiragino Sans", "Hiragino Kaku Gothic Pro", "AppleGothic",

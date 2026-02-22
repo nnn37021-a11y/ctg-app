@@ -15,7 +15,7 @@ for _font in _jp_fonts:
     if _font in _available:
         matplotlib.rcParams['font.family'] = _font
         break
-
+matplotlib.rcParams["axes.unicode_minus"] = False   ＃追加
 st.set_page_config(page_title="臨床試験エクスプローラー", page_icon="🔬", layout="wide")
 
 # =====================================================

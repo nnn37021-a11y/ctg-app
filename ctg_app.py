@@ -6,6 +6,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import matplotlib
 import matplotlib.font_manager as fm
+import japanize_matplotlib
 
 # フォント設定（Mac/Windows/Linux対応）
 _jp_fonts = ["Hiragino Sans", "Hiragino Kaku Gothic Pro", "AppleGothic",
@@ -15,7 +16,7 @@ for _font in _jp_fonts:
     if _font in _available:
         matplotlib.rcParams['font.family'] = _font
         break
-matplotlib.rcParams["axes.unicode_minus"] = False #追加
+
 st.set_page_config(page_title="臨床試験エクスプローラー", page_icon="🔬", layout="wide")
 
 # =====================================================

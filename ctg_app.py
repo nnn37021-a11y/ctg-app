@@ -6,7 +6,8 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import matplotlib
 import matplotlib.font_manager as fm
-import japanize_matplotlib
+# 日本語フォント指定（Streamlit Cloud対応）
+plt.rcParams['font.family'] = 'DejaVu Sans'
 
 # フォント設定（Mac/Windows/Linux対応）
 _jp_fonts = ["Hiragino Sans", "Hiragino Kaku Gothic Pro", "AppleGothic",
